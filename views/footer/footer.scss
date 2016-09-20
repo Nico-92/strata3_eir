@@ -1,0 +1,54 @@
+.footer {
+	color: #fff;
+	background-repeat: no-repeat;
+	height: auto;
+	background-color: black;
+
+	a {
+		color: #fff;
+		cursor: pointer;
+	}
+	a:hover {
+		color: grey;
+	}
+	.background-image {
+		background-image: url('/assets/images/eir_logo_graphite.png');
+		background-size: 100%
+	}
+	.back-to-top {
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		i {
+			padding: 5px;
+		}
+	}
+	.col-md-custom {
+		width: 20%;
+		display: inline-table;
+
+		.menu-label {
+			font-weight: bolder;
+		}
+		.menu-body {
+			padding-top: 10px;
+			list-style-type: none;
+			padding-left: 0px;
+			line-height: 25px;
+		}
+	}
+	.social-icons {
+		i {
+			padding: 30px;
+		}
+	}
+	.footer-menu li{
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		font-weight: bold;
+	}
+	.disclaimer{
+		padding-top: 10px;
+		padding-bottom: 50px;
+	}
+}

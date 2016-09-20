@@ -1,0 +1,29 @@
+//- Mobile
+div(ng-controller="headerController" ng-cloak)
+	.row.hidden-md.hidden-lg
+		.col-sm-12.header-mobile
+			img.logo(src="/assets/images/eir-logo.gif" alt="eir logo")
+			img.hamburger(src="/assets/images/mobile-menu.png" alt="Menu")
+	.row.hidden-xs.hidden-sm.header.header-top
+		.col-md-offset-2.col-md-4
+			a
+				| eir home
+			a
+				| eir business
+		.col-md-4.text-right
+			a
+				| my eir
+			a
+				| webmail
+	.row.hidden-xs.hidden-sm.header.header-menu
+		.col-md-offset-2.col-md-3
+			img(src="/assets/images/eir-logo.gif" alt="eir logo")
+		.col-md-5.text-right
+			ul
+				li(ng-repeat="element in menu" ng-click="select($index,0)" ng-class="{active: $index == selectedMenu}")
+					| {{element.label}}
+	.row.hidden-xs.hidden-sm.header.header-submenu
+		.col-md-offset-2.col-md-8.text-right
+			ul
+				li(ng-repeat="element in menu[selectedMenu].submenu" ng-click="select($index,1)" ng-class="{active: $index == selectedSubMenu}")
+					| {{element}}

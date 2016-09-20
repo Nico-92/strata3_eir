@@ -1,0 +1,35 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "header/header";
+@import "index/index";
+@import "footer/footer";
+
+$backgoundColor: #000;
+$foregroundColor: #fff;
+$panelColor: #ccc;
+$linkcolor: blue;
+$textColor1: #000;
+$textColor2: #fff;
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
+    -moz-box-sizing: border-box; /* Needed for Firefox */
+    box-sizing: border-box
+}
+
+@font-face {
+	font-family: "gt-walsheim-regular";
+	src: url("assets/fonts/gt-walsheim-web.ttf");
+}
+@font-face {
+	font-family: "gt-walsheim-bold";
+	src: url("assets/fonts/gt-walsheim-bold-web.ttf");
+}
+@font-face {
+	font-family: "gt-walsheim-light";
+	src: url("assets/fonts/gt-walsheim-light-web.ttf");
+}
+
+
+body {
+	/*font-family: "gt-walsheim-regular";*/
+}

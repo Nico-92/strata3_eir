@@ -1,0 +1,18 @@
+doctype html
+html(ng-app="app" ng-strict-di)
+	head
+		title= title
+		link(rel='stylesheet', href='/index.css')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+	body
+	include header/header.jade
+	block content
+	include footer/footer.jade
+	#modal-tips.modal.fade(tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+		.modal-dialog(role="document")
+			.modal-content
+				.modal-body
+script(type='text/javascript', src='/libs.min.js') 
+script(type='text/javascript', src='/app.js')
+script(type='text/javascript', src='/header/headerController.js')
+script(type='text/javascript', src='/footer/footerController.js')

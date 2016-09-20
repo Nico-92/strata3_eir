@@ -1,0 +1,38 @@
+.row.footer(ng-controller="footerController")
+	.col-md-offset-2.col-md-8.background-image
+		.row.text-right.back-to-top
+			i.fa.fa-chevron-up.fa-lg
+			| Back to top
+		.row
+			.col-md-custom(ng-repeat="element in menu")
+				span.menu-label{{element.label}}
+				ul.menu-body
+					li(ng-repeat="innerElement in element.submenu")
+						{{innerElement.label}}
+		.row.text-center.social-icons
+			a(href="https://www.facebook.com/eir" target="_blank")
+				i.fa.fa-facebook.fa-2x
+			a(href="https://twitter.com/eir" target="_blank")
+				i.fa.fa-twitter.fa-2x
+			a(href="https://plus.google.com/+eir" target="_blank")
+				i.fa.fa-google-plus.fa-2x
+		.row.footer-menu
+			ul.list-unstyled.list-inline.text-center
+				li
+					a(href="https://www.eir.ie/group/pricing/") Pricing
+				li
+					a(href="https://www.eir.ie/termsandconditions/") Terms & Conditions
+				li
+					a(href="https://www.eir.ie/about/legal/") Legal Disclaimer
+				li
+					a(href="https://www.eir.ie/accessibility/") Accessibility
+				li
+					a(href="https://www.eir.ie/childsafety/") Child Safety
+				li
+					a(href="https://www.eir.ie/privacystatement/") Privacy
+				li
+					a(href="https://www.eir.ie/about/contact/") Contact Us
+				li
+					a(href="https://www.eir.ie/cookies") Cookies
+		.row.disclaimer
+			| eircom Limited, Registered as a Branch in Ireland Number 907674, Incorporated in Jersey Number 116389. Branch Address: 1 Heuston South Quarter, St. John's Road, Dublin 8, Ireland.
