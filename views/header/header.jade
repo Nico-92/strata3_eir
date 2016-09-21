@@ -16,9 +16,9 @@ div(ng-controller="headerController" ng-cloak)
 			a
 				| webmail
 	.row.hidden-xs.hidden-sm.header.header-menu
-		.col-md-offset-2.col-md-3
+		.col-md-offset-2.col-md-2
 			img(src="/assets/images/eir-logo.gif" alt="eir logo")
-		.col-md-5.text-right
+		.col-md-6.text-right
 			ul
 				li(ng-repeat="element in menu" ng-click="select($index,0)" ng-class="{active: $index == selectedMenu}")
 					| {{element.label}}

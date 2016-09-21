@@ -5822,14 +5822,38 @@ button.close {
   background-repeat: no-repeat;
   height: auto;
   background-color: black; }
+  .footer a {
+    color: #fff;
+    cursor: pointer; }
+  .footer a:hover {
+    color: grey; }
   .footer .background-image {
-    background-image: url("/assets/images/eir_logo_graphite.png"); }
+    background-image: url("/assets/images/eir_logo_graphite.png");
+    background-size: 100%; }
   .footer .back-to-top {
     padding-top: 50px;
     padding-bottom: 50px; }
+    .footer .back-to-top i {
+      padding: 5px; }
   .footer .col-md-custom {
     width: 20%;
-    display: inline-block; }
+    display: inline-table; }
+    .footer .col-md-custom .menu-label {
+      font-weight: bolder; }
+    .footer .col-md-custom .menu-body {
+      padding-top: 10px;
+      list-style-type: none;
+      padding-left: 0px;
+      line-height: 25px; }
+  .footer .social-icons i {
+    padding: 30px; }
+  .footer .footer-menu li {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    font-weight: bold; }
+  .footer .disclaimer {
+    padding-top: 10px;
+    padding-bottom: 50px; }
 
 *, *:before, *:after {
   /* Needed for mobile WebKit */

@@ -1,6 +1,6 @@
+@import "../variables";
 .footer {
 	color: #fff;
-	background-repeat: no-repeat;
 	height: auto;
 	background-color: black;
 
@@ -13,9 +13,19 @@
 	}
 	.background-image {
 		background-image: url('/assets/images/eir_logo_graphite.png');
-		background-size: 100%
+		background-size: 100%;
+		background-repeat: no-repeat;
+		@media (max-width: $screen-sm-min) {
+		    background-position-x: -327px;
+    		background-position-y: 4px;
+    		background-size: 236%;
+    	}
 	}
 	.back-to-top {
+		text-align: center;
+		@media (min-width: $screen-sm-min) {
+			text-align: right;
+		}
 		padding-top: 50px;
 		padding-bottom: 50px;
 
@@ -24,9 +34,10 @@
 		}
 	}
 	.col-md-custom {
-		width: 20%;
-		display: inline-table;
-
+		@media (min-width: $screen-sm-min) {
+			width: 20%;
+			display: inline-table;
+		}
 		.menu-label {
 			font-weight: bolder;
 		}
@@ -42,13 +53,17 @@
 			padding: 30px;
 		}
 	}
-	.footer-menu li{
+	.footer-menu li {
 		padding-left: 15px !important;
 		padding-right: 15px !important;
 		font-weight: bold;
 	}
-	.disclaimer{
+	.disclaimer {
 		padding-top: 10px;
 		padding-bottom: 50px;
+		@media (max-width: $screen-sm-min) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 }

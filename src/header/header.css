@@ -54,10 +54,8 @@
 .header-mobile {
   background-color: #000; }
   .header-mobile .logo {
-    height: 250px;
     padding-left: 20px; }
   .header-mobile .hamburger {
-    height: 100px;
     top: 50%;
     margin-top: -26px;
     position: absolute;

@@ -1,6 +1,11 @@
+/*// Extra small screen / phone*/
+/*// Small screen / tablet*/
+/*// Medium screen / desktop*/
+/*// Large screen / wide desktop*/
+/*// So media queries don't overlap when required, provide a maximum*/
+/*Colors*/
 .footer {
   color: #fff;
-  background-repeat: no-repeat;
   height: auto;
   background-color: black; }
   .footer a {
@@ -10,22 +15,33 @@
     color: grey; }
   .footer .background-image {
     background-image: url("/assets/images/eir_logo_graphite.png");
-    background-size: 100%; }
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .footer .background-image {
+        background-position-x: -327px;
+        background-position-y: 4px;
+        background-size: 236%; } }
   .footer .back-to-top {
+    text-align: center;
     padding-top: 50px;
     padding-bottom: 50px; }
+    @media (min-width: 768px) {
+      .footer .back-to-top {
+        text-align: right; } }
     .footer .back-to-top i {
       padding: 5px; }
-  .footer .col-md-custom {
-    width: 20%;
-    display: inline-table; }
-    .footer .col-md-custom .menu-label {
-      font-weight: bolder; }
-    .footer .col-md-custom .menu-body {
-      padding-top: 10px;
-      list-style-type: none;
-      padding-left: 0px;
-      line-height: 25px; }
+  @media (min-width: 768px) {
+    .footer .col-md-custom {
+      width: 20%;
+      display: inline-table; } }
+  .footer .col-md-custom .menu-label {
+    font-weight: bolder; }
+  .footer .col-md-custom .menu-body {
+    padding-top: 10px;
+    list-style-type: none;
+    padding-left: 0px;
+    line-height: 25px; }
   .footer .social-icons i {
     padding: 30px; }
   .footer .footer-menu li {
@@ -35,3 +51,7 @@
   .footer .disclaimer {
     padding-top: 10px;
     padding-bottom: 50px; }
+    @media (max-width: 768px) {
+      .footer .disclaimer {
+        padding-left: 10px;
+        padding-right: 10px; } }
