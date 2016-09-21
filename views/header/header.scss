@@ -1,13 +1,11 @@
-$backgroundColorMenu: #25262a;
-$backgroundColorTop: #000;
-$backgroundColorSubMenu: #fff;
-$textColor: #fff;
+@import "hamburger";
+@import "../variables";
 
 .header {
-	color: $textColor;
+	color: $textColor2;
 
 	a {
-		color: $textColor;
+		color: $textColor2;
 		cursor: pointer;
 		padding-right: 20px;
 	}
@@ -70,12 +68,5 @@ $textColor: #fff;
 
 	.logo {
 		padding-left: 20px;
-	}
-	.hamburger {
-		top: 50%;
-		margin-top: -26px;
-		position: absolute;
-		right: 0px;
-		padding-right: 20px;
 	}
 }
