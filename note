@@ -6,3 +6,4 @@ Header e footer su layout
 Menu e sub menu non sono correlati
 L'utilizzo della direttiva per faq, la translusion multipla e lo scope isolato
 flexbox
+nei css quelli custom sempre per ultimi cosi da sovrascrivere gli altri

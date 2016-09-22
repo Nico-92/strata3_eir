@@ -11,10 +11,30 @@
 
 .section-title {
   font-weight: bolder;
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.call-to-action {
+  font-weight: bold;
+  color: #00b5d5;
+  cursor: pointer;
+  text-decoration: underline; }
 
 .faq-container {
   background-color: #ececec; }
+  .faq-container .title {
+    display: inline-block;
+    color: #00b5d5;
+    cursor: pointer; }
+  .faq-container .title-icon {
+    cursor: pointer; }
+  .faq-container .border {
+    border-top-style: dotted;
+    border-top-width: 2px;
+    border-top-color: lightgray;
+    padding-bottom: 10px;
+    padding-top: 10px; }
 
 .help-container {
   background-color: #fff; }
@@ -60,3 +80,66 @@
     content: '';
     float: left;
     padding-top: 100%; }
+
+.carousel-container {
+  margin-top: 20px;
+  /* Carousel Styles */
+  /* Carousel Header Styles */ }
+  .carousel-container .carousel-indicators .active {
+    background-color: #2980b9; }
+  .carousel-container .carousel-inner img {
+    width: 100%;
+    max-height: 460px; }
+  .carousel-container .carousel-control {
+    width: 0; }
+  .carousel-container .carousel-control.left, .carousel-container .carousel-control.right {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background-image: none;
+    background-repeat: no-repeat;
+    text-shadow: none; }
+  .carousel-container .carousel-control.left span {
+    padding: 15px; }
+  .carousel-container .carousel-control.right span {
+    padding: 15px; }
+  .carousel-container .carousel-control .glyphicon-chevron-left, .carousel-container .carousel-control .glyphicon-chevron-right, .carousel-container .carousel-control .icon-prev, .carousel-container .carousel-control .icon-next {
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    display: inline-block; }
+  .carousel-container .carousel-control .glyphicon-chevron-left, .carousel-container .carousel-control .icon-prev {
+    left: 0; }
+  .carousel-container .carousel-control .glyphicon-chevron-right, .carousel-container .carousel-control .icon-next {
+    right: 0; }
+  .carousel-container .carousel-control.left span, .carousel-container .carousel-control.right span {
+    background-color: #000; }
+  .carousel-container .carousel-control.left span:hover, .carousel-container .carousel-control.right span:hover {
+    opacity: .7;
+    filter: alpha(opacity=70); }
+  .carousel-container .header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff; }
+  .carousel-container .header-text h2 {
+    font-size: 40px; }
+  .carousel-container .header-text h2 span {
+    background-color: #2980b9;
+    padding: 10px; }
+  .carousel-container .header-text h3 span {
+    background-color: #000;
+    padding: 15px; }
+  .carousel-container .btn-min-block {
+    min-width: 170px;
+    line-height: 26px; }
+  .carousel-container .btn-theme {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-right: 15px; }
+  .carousel-container .btn-theme:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff; }
