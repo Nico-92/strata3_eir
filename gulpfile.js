@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     exec = require('child_process').exec;
     var sass = require('gulp-sass');
     var livereload = require('gulp-livereload');
+    livereload({ start: true })
 
 require('require-dir')('./gulp');
 
@@ -40,7 +41,8 @@ gulp.task('serve', ['copyAssetstoSrc', 'styles'], function() {
     //live reload
     gulp.watch(['app.js', 'routes/**/*.js', 'libraries/*.js', 'views/**/*.jade'], $.express.run);
     gulp.watch(['views/**/*.scss', 'views/*.scss'], ['styles']);
-    gulp.watch(['views/**/*.js', 'views/**/*.html'], ['copyFiletoSrc'])
+    gulp.watch(['views/**/*.js', 'views/**/*.html'], ['copyFiletoSrc']);
+    
 });
 
 gulp.task('copyAssetstoSrc', function() {

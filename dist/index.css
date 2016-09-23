@@ -5905,10 +5905,30 @@ button.close {
 
 .section-title {
   font-weight: bolder;
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.call-to-action {
+  font-weight: bold;
+  color: #00b5d5;
+  cursor: pointer;
+  text-decoration: underline; }
 
 .faq-container {
   background-color: #ececec; }
+  .faq-container .title {
+    display: inline-block;
+    color: #00b5d5;
+    cursor: pointer; }
+  .faq-container .title-icon {
+    cursor: pointer; }
+  .faq-container .border {
+    border-top-style: dotted;
+    border-top-width: 2px;
+    border-top-color: lightgray;
+    padding-bottom: 10px;
+    padding-top: 10px; }
 
 .help-container {
   background-color: #fff; }
@@ -5952,6 +5972,51 @@ button.close {
     content: '';
     float: left;
     padding-top: 100%; }
+
+/* Carousel Styles */
+.carousel-indicators .active {
+  background-color: #00b5d5;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-color: #00b5d5; }
+
+.carousel-indicators li {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #ececec;
+  border-color: #ececec; }
+
+.carousel-inner img {
+  width: 100%;
+  max-height: 460px; }
+
+/* Carousel Header Styles */
+.header-text {
+  position: absolute;
+  top: 20%;
+  left: 1.8%;
+  right: auto;
+  width: 96.66666666666666%;
+  color: #fff;
+  font-size: 40px; }
+
+.div-call-to-action {
+  margin-bottom: 15px; }
+
+.btn-call-to-action {
+  background-color: purple;
+  color: #fff;
+  border-radius: 75px;
+  width: 150px;
+  height: 150px;
+  bottom: -12px;
+  position: fixed;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  padding-top: 55px;
+  font-weight: bold; }
 
 /*// Extra small screen / phone*/
 /*// Small screen / tablet*/

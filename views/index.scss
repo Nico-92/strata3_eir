@@ -27,3 +27,14 @@
 body {
 	/*font-family: "gt-walsheim-regular";*/
 }
+.flex-row{
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-col{
+	display: flex;
+    flex-direction: column;
+}

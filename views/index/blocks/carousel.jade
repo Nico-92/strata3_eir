@@ -1,64 +1,33 @@
-.container
-  .row
-    // Carousel
-    #carousel-example-generic.carousel.slide(data-ride='carousel')
-      // Indicators
-      ol.carousel-indicators
-        li.active(data-target='#carousel-example-generic', data-slide-to='0')
-        li(data-target='#carousel-example-generic', data-slide-to='1')
-        li(data-target='#carousel-example-generic', data-slide-to='2')
-      // Wrapper for slides
-      .carousel-inner
-        .item.active
-          img(src='http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg', alt='First slide')
-          // Static Header
-          .header-text.hidden-xs
-            .col-md-12.text-center
-              h2
-                span
-                  | Welcome to 
-                  strong LOREM IPSUM
-              br
-              h3
-                span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              br
-              div
-                a.btn.btn-theme.btn-sm.btn-min-block(href='#') Login
-                a.btn.btn-theme.btn-sm.btn-min-block(href='#') Register
-          // /header-text
-        .item
-          img(src='http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg', alt='Second slide')
-          // Static Header
-          .header-text.hidden-xs
-            .col-md-12.text-center
-              h2
-                span Welcome to LOREM IPSUM
-              br
-              h3
-                span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              br
-              div
-                a.btn.btn-theme.btn-sm.btn-min-block(href='#') Login
-                a.btn.btn-theme.btn-sm.btn-min-block(href='#') Register
-          // /header-text
-        .item
-          img(src='http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg', alt='Third slide')
-          // Static Header
-          .header-text.hidden-xs
-            .col-md-12.text-center
-              h2
-                span Welcome to LOREM IPSUM
-              br
-              h3
-                span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              br
-              div
-                a.btn.btn-theme.btn-sm.btn-min-block(href='#') Login
-                a.btn.btn-theme.btn-sm.btn-min-block(href='#') Register
-          // /header-text
-      // Controls
-      a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
-        span.glyphicon.glyphicon-chevron-left
-      a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
-        span.glyphicon.glyphicon-chevron-right
-    // /carousel
+.row
+  #carousel-example-generic.carousel.slide(data-ride='carousel')
+    //- Indicators
+    ol.carousel-indicators.hidden-xs
+      li.active(data-target='#carousel-example-generic', data-slide-to='0')
+      li(data-target='#carousel-example-generic', data-slide-to='1')
+      li(data-target='#carousel-example-generic', data-slide-to='2')
+    //- Wrapper for slides
+    .carousel-inner
+     .item.active
+        img(src='http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg', alt='Third slide')
+        //- Static Header
+        .header-text
+          .col-md-6.text-center
+            span Be the first to get Ireland's fastest broadband
+        .col-md-12.text-left.div-call-to-action
+          a.btn.btn-call-to-action(href='#') Learn more
+     .item
+        img(src='http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg', alt='Third slide')
+        //- Static Header
+        .header-text
+          .col-md-6.text-center
+            span Be the first to get Ireland's fastest broadband
+        .col-md-12.text-left.div-call-to-action
+          a.btn.btn-call-to-action(href='#') More info
+     .item
+        img(src='http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg', alt='Third slide')
+        //- Static Header
+        .header-text
+          .col-md-6.text-center
+            span Be the first to get Ireland's fastest broadband
+        .col-md-12.text-left.div-call-to-action
+          a.btn.btn-call-to-action(href='#') Try it!
