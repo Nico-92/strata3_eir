@@ -7,3 +7,4 @@ Menu e sub menu non sono correlati
 L'utilizzo della direttiva per faq, la translusion multipla e lo scope isolato
 flexbox
 nei css quelli custom sempre per ultimi cosi da sovrascrivere gli altri
+text image con valori css e contenuto inseriti da json
