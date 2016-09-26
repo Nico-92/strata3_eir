@@ -5922,7 +5922,11 @@ button.close {
     font-weight: bold;
     color: #00b5d5;
     cursor: pointer;
-    text-decoration: underline; }
+    text-decoration: underline;
+    font-size: 200%; }
+  @media (max-width: 992px) {
+    .call-to-action a {
+      font-size: 200%; } }
 
 /*Circular fixed call to action*/
 .div-call-to-action {
