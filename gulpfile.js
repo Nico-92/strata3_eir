@@ -4,10 +4,8 @@ var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     scripts = require('./gulp/scripts'),
     styles = require('./gulp/styles'),
-    exec = require('child_process').exec;
+    // exec = require('child_process').exec;
     var sass = require('gulp-sass');
-    var livereload = require('gulp-livereload');
-    livereload({ start: true })
 
 require('require-dir')('./gulp');
 
@@ -18,11 +16,11 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('src/'));
 });
 
+// Main task
 gulp.task('serve', ['copyAssetstoSrc', 'styles'], function() {
     gulp.src(['views/**/*.js', 'views/**/*.html'])
         .pipe(gulp.dest('src'))
-        .pipe($.uglify())
-        .pipe($.notify('Copy of js and html: Done'));
+        .pipe($.uglify());
 
     scripts.getJsFiles({
         dir: 'src',
@@ -37,7 +35,7 @@ gulp.task('serve', ['copyAssetstoSrc', 'styles'], function() {
 
     // Start the $.express at the beginning of the task 
     $.express.run(['bin/www']);
-    //live reload
+    // Watches
     gulp.watch(['app.js', 'routes/**/*.js', 'libraries/*.js', 'views/**/*.jade'], $.express.run);
     gulp.watch(['views/**/*.scss', 'views/*.scss'], ['styles']);
     gulp.watch(['views/**/*.js', 'views/**/*.html'], ['copyFiletoSrc']);
@@ -47,13 +45,11 @@ gulp.task('serve', ['copyAssetstoSrc', 'styles'], function() {
 gulp.task('copyAssetstoSrc', function() {
     gulp.src('views/assets/**/*')
         .pipe($.changed('src/assets'))
-        .pipe(gulp.dest('src/assets'))
-        .pipe(livereload());
+        .pipe(gulp.dest('src/assets'));
 });
 
 
 gulp.task('copyFiletoSrc', function() {
   gulp.src(['views/**/*.js', 'views/**/*.html'])
-    .pipe(gulp.dest('src'))
-    .pipe(livereload());
+    .pipe(gulp.dest('src'));
 })
