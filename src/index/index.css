@@ -69,7 +69,9 @@
       margin-right: -15px; }
     .custom-container .central-block {
       margin-right: -15px;
-      margin-left: -15px; } }
+      margin-left: -15px; }
+    .custom-container .mobile-text {
+      font-size: 1.5em !important; } }
 
 .three-blocks-container-image {
   padding-top: 20px;

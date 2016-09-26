@@ -18,7 +18,6 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('src/'));
 });
 
-
 gulp.task('serve', ['copyAssetstoSrc', 'styles'], function() {
     gulp.src(['views/**/*.js', 'views/**/*.html'])
         .pipe(gulp.dest('src'))
