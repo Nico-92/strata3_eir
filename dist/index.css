@@ -5898,17 +5898,23 @@ button.close {
 /*// Large screen / wide desktop*/
 /*// So media queries don't overlap when required, provide a maximum*/
 /*Colors*/
+/* ------ START Common CSS to all blocks ------ */
+/*Main container of all blocks*/
 .content {
-  /*background-color: $backgroundColorContent;*/
   padding-left: 10px;
   padding-right: 10px; }
 
+/*Title of the block*/
 .section-title {
   font-weight: bolder;
   font-size: 2.5em;
   padding-top: 20px;
   padding-bottom: 20px; }
 
+.section-subtitle {
+  font-size: 1.5em; }
+
+/*Call to action inside block*/
 .call-to-action {
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -5918,6 +5924,27 @@ button.close {
     cursor: pointer;
     text-decoration: underline; }
 
+/*Circular fixed call to action*/
+.div-call-to-action {
+  margin-bottom: 15px; }
+  .div-call-to-action .btn-call-to-action {
+    background-color: #8d00ef;
+    color: #fff;
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
+    bottom: -12px;
+    position: absolute;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    padding-top: 55px;
+    font-weight: bold; }
+  .div-call-to-action .btn-call-to-action:hover {
+    color: lightgrey; }
+
+/*Common icon style*/
 .icon {
   width: 80px !important;
   height: 80px !important;
@@ -5926,8 +5953,17 @@ button.close {
   margin-bottom: 10px;
   background-repeat: no-repeat; }
 
-.container {
+/*Container of a block*/
+.custom-container {
   background-color: #ececec; }
+  @media (min-width: 992px) {
+    .custom-container .right-block {
+      margin-left: -15px; }
+    .custom-container .left-block {
+      margin-right: -15px; }
+    .custom-container .central-block {
+      margin-right: -15px;
+      margin-left: -15px; } }
 
 .three-blocks-container-image {
   padding-top: 20px;
@@ -5942,6 +5978,10 @@ button.close {
       font-size: 2em;
       padding-left: 10px;
       padding-right: 10px; }
+      @media (max-width: 992px) {
+        .three-blocks-container-image .inner-box .title {
+          margin-top: 10px;
+          margin-bottom: 10px; } }
     .three-blocks-container-image .inner-box a {
       text-decoration: underline;
       color: #00b5d5;
@@ -5951,15 +5991,29 @@ button.close {
       font-weight: bold;
       padding-left: 10px;
       padding-right: 10px; }
+      @media (max-width: 992px) {
+        .three-blocks-container-image .inner-box .call-to-action {
+          padding-top: 0px; } }
 
 .text-image-container img {
   width: 100%;
   height: 100%; }
 
-.text-image-container .text {
+@media (max-width: 992px) {
+  .text-image-container .btn-call-to-action {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    padding-top: 35px;
+    bottom: -10px; } }
+
+.text-image-container .text-block {
   background-color: #000;
   color: #fff; }
-  .text-image-container .text .title {
+  .text-image-container .text-block .inner-box {
+    padding: 10px;
+    padding-bottom: 80px; }
+  .text-image-container .text-block .title {
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 2.5em; }
@@ -5989,16 +6043,14 @@ button.close {
       opacity: 0.5; }
   .two-blocks-container .left-block {
     background-color: #fff;
-    color: #333;
-    margin-right: -15px; }
+    color: #333; }
     .two-blocks-container .left-block a {
       color: #00b5d5; }
     .two-blocks-container .left-block .div-call-to-action i {
       color: lightgrey; }
   .two-blocks-container .right-block {
     background-color: #333;
-    color: #fff;
-    margin-left: -15px; }
+    color: #fff; }
     .two-blocks-container .right-block a {
       color: #fff; }
 
@@ -6008,20 +6060,21 @@ button.close {
   padding-left: 30px;
   padding-right: 30px; }
 
-.three-blocks-container .left-block {
-  border-right-style: dotted;
-  border-right-width: 3px;
-  border-right-color: lightgray;
-  margin-right: -15px; }
+@media (min-width: 992px) {
+  .three-blocks-container .left-block {
+    border-right-style: dotted;
+    border-right-width: 3px;
+    border-right-color: lightgray; } }
 
-.three-blocks-container .central-block {
-  margin-right: -15px;
-  margin-left: -15px; }
+@media (max-width: 992px) {
+  .three-blocks-container .left-block {
+    border-bottom-style: dotted;
+    border-bottom-width: 3px;
+    border-bottom-color: lightgray; } }
 
 .three-blocks-container .special-block {
   background-color: #00b5d5;
-  color: #fff;
-  margin-left: -15px; }
+  color: #fff; }
   .three-blocks-container .special-block .title {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -6047,6 +6100,14 @@ button.close {
 .three-blocks-container .icon-phone {
   margin-top: 50px;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%20%20%3Cdefs%3E%20%20%20%20%3Cstyle%3E%20%20%20%20%20%20.cls-1%20%7B%20%20%20%20%20%20%20%20fill%3A%20%2354585a%3B%20%20%20%20%20%20%20%20fill-rule%3A%20evenodd%3B%20%20%20%20%20%20%7D%20%20%20%20%3C%2Fstyle%3E%20%20%3C%2Fdefs%3E%20%20%3Cpath%20id%3D%22PHONE%22%20class%3D%22cls-1%22%20d%3D%22M326.564%2C2722.98l-0.571.59c-3.426%2C3.51-2.284%2C9.36%2C2.284%2C14.05s10.279%2C5.85%2C13.706%2C2.34a0.917%2C0.917%2C0%2C0%2C0-.286-0.88%2C0.851%2C0.851%2C0%2C0%2C0-.856-0.29c-2.856%2C2.92-7.424%2C1.75-11.422-2.34s-5.139-8.78-2.284-11.71l0.286-.29c0.713-.73%2C1-0.73%2C1.713%2C0l1.142%2C1.17c0.714%2C0.73.714%2C1.02%2C0%2C1.75l-0.286.3a3.368%2C3.368%2C0%2C0%2C0%2C0%2C4.68l3.427%2C3.51a3.18%2C3.18%2C0%2C0%2C0%2C4.568%2C0l0.286-.29c0.713-.73%2C1-0.73%2C1.713%2C0l2.855%2C2.93a0.873%2C0.873%2C0%2C0%2C0%2C.857-0.3%2C0.915%2C0.915%2C0%2C0%2C0%2C.285-0.88l-3.14-3.21c-1.285-1.32-2.142-1.32-3.427%2C0l-0.571.58a1.581%2C1.581%2C0%2C0%2C1-2.284%2C0l-3.426-3.51a1.683%2C1.683%2C0%2C0%2C1%2C0-2.34l0.571-.59c1.284-1.31%2C1.284-2.19%2C0-3.51l-1.714-1.76C328.706%2C2721.67%2C327.849%2C2721.67%2C326.564%2C2722.98Z%22%20transform%3D%22translate%28-324%20-2722%29%22%2F%3E%3C%2Fsvg%3E"); }
+
+.three-blocks-container .btn-call-to-action {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  padding-top: 35px;
+  bottom: 0px;
+  right: -40px; }
 
 .three-blocks-thumbnail-container .icon {
   background-image: url("/assets/images/turqblue.png");
@@ -6132,24 +6193,6 @@ button.close {
   width: 96.66666666666666%;
   color: #fff;
   font-size: 40px; }
-
-.div-call-to-action {
-  margin-bottom: 15px; }
-
-.btn-call-to-action {
-  background-color: purple;
-  color: #fff;
-  border-radius: 75px;
-  width: 150px;
-  height: 150px;
-  bottom: -12px;
-  position: fixed;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 20px;
-  padding-top: 55px;
-  font-weight: bold; }
 
 /*// Extra small screen / phone*/
 /*// Small screen / tablet*/
@@ -6239,7 +6282,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-bottom: 15px; }
 
 .flex-col {
   display: -ms-flexbox;
