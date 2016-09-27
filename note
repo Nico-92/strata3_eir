@@ -70,3 +70,10 @@ Faq directive and transclusion
 -------------------------------------------------
 I like the use of the faq directive. Inside the jade I put the information (hardcoded in this case, dynamic in a real world case) and then the directive use the transclusion property to use it. This kind of transclusion in multi transclusion which is available from angular 1.4.
 The scope of the directive is isolated, and this make possible to open the content of every question alone, because every question has an isolated scope.
+
+-------------------------------------------------
+Git and production flow
+-------------------------------------------------
+
+In this case i put inside the git repo also the src folder, because I use that repo to serve the app at https://strata3-eir.herokuapp.com/ .
+But in a real case I don't need to put the src in git, because the view folder is enough. The src will be created running gulp tasks on the server.
