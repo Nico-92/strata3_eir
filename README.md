@@ -6,16 +6,17 @@ The two directories that contains the front end are views and src.
 Views contains the jade, css and javascript for the development, src the files for production. All the file inside src are generated from gulp and should not be touched. (Because they are overwritten).
 Here the structure:
 Here the structure of views/src:
-├── assets
-│   ├── fonts
-│   └── images
-├── directives
-├── footer
-├── header
-├── index
-│   └── blocks
-├── jquery
-└── services
+
+assets
+   fonts
+   images
+directives
+footer
+header
+index
+   blocks
+jquery
+services
 
 Assents contains the custom fonts and all the images. Images can also be inside some subfolders.
 Directives contains all common the directives.
