@@ -1,7 +1,7 @@
 .row.footer(ng-controller="footerController")
 	.col-md-offset-2.col-md-8.col-sm-12.background-image
 		.row.back-to-top
-			i.fa.fa-chevron-up.fa-lg
+			i.fa.fa-chevron-up.fa-lg(aria-hidden="true")
 			| Back to top
 		.row
 			.col-xs-6.col-sm-6.col-md-custom(ng-repeat="element in menu")
@@ -12,11 +12,11 @@
 		.row.text-center.social-icons
 			.col-md-12
 				a(href="https://www.facebook.com/eir" target="_blank")
-					i.fa.fa-facebook.fa-2x
+					i.fa.fa-facebook.fa-2x(aria-hidden="true" title="Facebook")
 				a(href="https://twitter.com/eir" target="_blank")
-					i.fa.fa-twitter.fa-2x
+					i.fa.fa-twitter.fa-2x(aria-hidden="true" title="Twitter")
 				a(href="https://plus.google.com/+eir" target="_blank")
-					i.fa.fa-google-plus.fa-2x
+					i.fa.fa-google-plus.fa-2x(aria-hidden="true" title="Google plus")
 		.row.footer-menu
 			ul.list-unstyled.list-inline.text-center
 				li

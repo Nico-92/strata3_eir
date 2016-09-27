@@ -1,4 +1,4 @@
-div(ng-controller="headerController" ng-cloak)
+div(data-ng-controller="headerController" ng-cloak)
 	//- Mobile
 	.row.hidden-md.hidden-lg
 		.col-sm-12.header-mobile
@@ -14,8 +14,8 @@ div(ng-controller="headerController" ng-cloak)
 							span {{element.label}}
 						.col-sm-2.text-right
 							span 
-								i.fa.fa-chevron-down(ng-show="!showSubmenu")
-								i.fa.fa-chevron-up(ng-show="showSubmenu")
+								i.fa.fa-chevron-down(ng-show="!showSubmenu" aria-hidden="true")
+								i.fa.fa-chevron-up(ng-show="showSubmenu" aria-hidden="true")
 					.row.mobileSubmenu(ng-show="showSubmenu")
 						ul
 							li(ng-repeat="element in menu[selectedMenu].submenu")
