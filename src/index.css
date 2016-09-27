@@ -5956,6 +5956,21 @@ button.close {
   .header-mobile .logo {
     padding-left: 20px; }
 
+.menu-container {
+  background-color: #000;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: x-large;
+  line-height: 55px; }
+  .menu-container ul {
+    list-style-type: none; }
+  .menu-container a {
+    color: #fff !important; }
+  .menu-container .mobileSubmenu {
+    margin-left: -55px;
+    background-color: #e30047; }
+
 /*// Extra small screen / phone*/
 /*// Small screen / tablet*/
 /*// Medium screen / desktop*/
@@ -5998,7 +6013,7 @@ button.close {
     background-color: #8d00ef;
     color: #fff;
     border-radius: 75px;
-    width: 500px;
+    width: 150px;
     height: 150px;
     bottom: -12px;
     position: absolute;

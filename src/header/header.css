@@ -139,3 +139,18 @@
   background-color: #000; }
   .header-mobile .logo {
     padding-left: 20px; }
+
+.menu-container {
+  background-color: #000;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: x-large;
+  line-height: 55px; }
+  .menu-container ul {
+    list-style-type: none; }
+  .menu-container a {
+    color: #fff !important; }
+  .menu-container .mobileSubmenu {
+    margin-left: -55px;
+    background-color: #e30047; }
