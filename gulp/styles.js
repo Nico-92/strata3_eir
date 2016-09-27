@@ -51,8 +51,7 @@ var getCssFiles = function(opt) {
       //   preserve: false
       // }))
       // .pipe($.minifyCss())
-      .pipe(gulp.dest('src/'))
-      .pipe(gulp.dest('dist/'));
+      .pipe(gulp.dest('src/'));
 
     if (opt.reloadServer != undefined && opt.reloadServer) {
       styleStream.pipe($.express.notify());

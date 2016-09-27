@@ -34,12 +34,10 @@ gulp.task('build_lib_scripts',function(){
             "bower_components/angular-sanitize/angular-sanitize.js",
             "bower_components/angular-messages/angular-messages.js",
             "bower_components/angular-bind-html-compile/angular-bind-html-compile.js",
-            "bower_components/angular-mass-autocomplete/massautocomplete.js",
             "bower_components/lodash/lodash.js",
             "bower_components/jquery/dist/jquery.js",
             "bower_components/jquery.cookie/jquery.cookie.js",
             "bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
-            "bower_components/angular-google-maps/dist/angular-google-maps.js",
             "bower_components/angular-cookie/angular-cookie.js",
             "bower_components/moment/src/moment.js"
         ],

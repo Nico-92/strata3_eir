@@ -75,3 +75,4 @@ Git and production flow
 
 In this case i put inside the git repo also the src folder, because I use that repo to serve the app at https://strata3-eir.herokuapp.com/ .
 But in a real case I don't need to put the src in git, because the view folder is enough. The src will be created running gulp tasks on the server.
+Moreover or the js should be combined in one minified js.

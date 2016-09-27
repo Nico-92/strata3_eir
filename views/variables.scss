@@ -26,17 +26,17 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 
 /*Colors*/
 $backgoundColor: #000;
-$foregroundColor: #fff;
+$backgroundCallToAction: #8d00ef;
 $backgroundColorContent: #ececec;
-$panelColor: #ccc;
+$backgroundColorMenu: #25262a;
+$backgroundColorSubMenu: #fff;
+$backgroundColorTop: #000;
+$detailsColor: #00b5d5;
+$doublePadding: 20px;
+$foregroundColor: #fff;
 $linkcolor: blue;
+$mobileSubmenuColor: #e30047;
+$panelColor: #ccc;
+$singlePadding: 10px;
 $textColor1: #000;
 $textColor2: #fff;
-$backgroundColorMenu: #25262a;
-$backgroundColorTop: #000;
-$backgroundColorSubMenu: #fff;
-$detailsColor: #00b5d5;
-$backgroundCallToAction: #8d00ef;
-$singlePadding: 10px;
-$doublePadding: 20px;
-$mobileSubmenuColor: #e30047;
