@@ -7,14 +7,11 @@ Views contains the jade, css and javascript for the development, src the files f
 Here the structure:
 Here the structure of views/src:
 
-assets
-   fonts
-   images
+assets -> fonts / images
 directives
 footer
 header
-index
-   blocks
+index -> blocks
 jquery
 services
 
