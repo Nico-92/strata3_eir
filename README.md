@@ -2,29 +2,13 @@
 Directories structure
 -------------------------------------------------
 
-The two directories that contains the front end are views and src.
-Views contains the jade, css and javascript for the development, src the files for production. All the file inside src are generated from gulp and should not be touched. (Because they are overwritten).
-Here the structure:
-Here the structure of views/src:
+The two directories that contain the front-end are views and src. Views contains the jade, css and javascript for the development, src the files for production. All the file inside src are generated from gulp and should not be touched. (Because they will be overwritten). Here the structure of views/src:
 
-assets -> fonts / images
-directives
-footer
-header
-index -> blocks
-jquery
-services
+assets -> fonts / images directives footer header index -> blocks jquery services
 
-Assents contains the custom fonts and all the images. Images can also be inside some subfolders.
-Directives contains all common the directives.
-Services contains all the services.
-Jquery contains all the javascript files which are not angular
-Then for every view there is a folder, like footer, header, and index. Inside this kind of folders there are all the files relatives to that view like:
-- sass
--jade
--controller
--directives
+Assents contains the custom fonts and all the images. Images can also be inside some subfolders. Directives contains all common the directives. Services contains all the services. Jquery contains all the javascript files which are not angular. Then for every view there is a folder, like footer, header, and index. Inside this kind of folders there are all the files related to that view like:
 
+sass - jade - controller - directives
 Inside index there is a subfolder called blocks, which contains all the possible blocks that compose the index. They can also be reused for other pages.
 
 -------------------------------------------------
@@ -33,23 +17,21 @@ Gulp tasks
 
 There is a main gulp task which is gulp serve.
 Other tasks are
- - copyAssetstoSrc to copy the assets
- - copyFiletoSrc to copy js and html files
- - style to compile sass and concatenate all the css inside one file
+* copyAssetstoSrc to copy the assets
+* copyFiletoSrc to copy js and html files
+* style to compile sass and concatenate all the css inside one file
 
  All these tasks are glued with some watches to.
  The gulpfile use some fuctions that are inside the gulp directory, for example the vendor javascript, like jquery, angular etc. are concatenated in one file col lib.min.js, and this operation is visible in gulp/build.js
-
-I decide to use gulp instead of grunt because I think that for simple operation gulp require less overhead, and also in the last year I used gulp.
 
 -------------------------------------------------
 Why Jade? 
 -------------------------------------------------
 
-Jade is much more powerfull than simple HTML in this project I just use the possibility of file inclusion. 
-The final html is only one file, but this file is composed of three different jade, header, index, and footer. Moreover index is composed of many blocks which are in different jade file.
+Jade is much more powerfull than simple HTML. In this project I just use the possibility of files inclusion. 
+The final html is only one file, but this file is composed of three different jade: header, index, and footer. Moreover index is composed of many blocks which are in different jade files.
 
-Header and footer are included from the layout.jade which is the parent file, and in this way all the pages have automatically the header and the footer. This approach is more maintanable and encourage re usability. For example I can reuse the blocks of the index in other pages.7
+Header and footer are included from the layout.jade which is the parent file, and in this way all the pages have automatically the header and the footer. This approach is more maintainable and encourages the reuse. For example I can reuse the blocks of the index in other pages.
 Another point of strenght of Jade are variables, if statement and loops, but I did not use them in this project.
 
 -------------------------------------------------
@@ -73,6 +55,6 @@ The scope of the directive is isolated, and this make possible to open the conte
 Git and production flow
 -------------------------------------------------
 
-In this case i put inside the git repo also the src folder, because I use that repo to serve the app at https://strata3-eir.herokuapp.com/ .
-But in a real case I don't need to put the src in git, because the view folder is enough. The src will be created running gulp tasks on the server.
-Moreover or the js should be combined in one minified js.
+In this case i put inside the git repo also the src folder, because I use the repo for serving the app at https://strata3-eir.herokuapp.com/ .
+But in a real case I don't need to put the src in git, because the view folder is enough. Gulp will create the src folder on the server.
+Moreover the js should be combined in one minified js.
