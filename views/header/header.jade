@@ -1,11 +1,38 @@
-//- Mobile
 div(ng-controller="headerController" ng-cloak)
+	//- Mobile
 	.row.hidden-md.hidden-lg
 		.col-sm-12.header-mobile
 			img.logo(src="/assets/images/eir-logo.gif" alt="eir logo")
-			button.c-hamburger.c-hamburger--htx
+			button.c-hamburger.c-hamburger--htx(ng-click="mobileMenuOpen = !mobileMenuOpen")
 				span Toggle menu
-			//- img.hamburger(src="/assets/images/mobile-menu.png" alt="Menu")
+	.row.hidden-md.hidden-lg.menu-container(ng-show="mobileMenuOpen")
+		.col-sm-12.col-xs-12
+			ul
+				li(ng-repeat="element in menu")
+					.row(ng-click="showSubmenu = !showSubmenu")
+						.col-sm-10
+							span {{element.label}}
+						.col-sm-2.text-right
+							span 
+								i.fa.fa-chevron-down(ng-show="!showSubmenu")
+								i.fa.fa-chevron-up(ng-show="showSubmenu")
+					.row.mobileSubmenu(ng-show="showSubmenu")
+						ul
+							li(ng-repeat="element in menu[selectedMenu].submenu")
+								| {{element}}
+		.col-sm-3.col-xs-3.text-center
+			a
+				| eir home
+		.col-sm-3.col-xs-3.text-center
+			a
+				| eir business
+		.col-sm-3.col-xs-3.text-center
+			a
+				| my eir
+		.col-sm-3.col-xs-3.text-center
+			a
+				| webmail
+	//- Desktop
 	.row.hidden-xs.hidden-sm.header.header-top
 		.col-md-offset-2.col-md-4
 			a

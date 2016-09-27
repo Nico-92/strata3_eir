@@ -70,3 +70,22 @@
 		padding-left: 20px;
 	}
 }
+.menu-container {
+	background-color: $backgoundColor;
+	color: $textColor2;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: x-large;
+	line-height: 55px;
+
+	ul {
+		list-style-type: none;
+	}
+	a {
+		color: $textColor2 !important;
+	}
+	.mobileSubmenu {
+		margin-left: -55px;
+		background-color: $mobileSubmenuColor;
+	}
+}

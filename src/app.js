@@ -1,2 +1,2 @@
 // inizializzo la app di angular
-var app = angular.module('app', ['ngMessages', 'ipCookie']);
+var app = angular.module('app', []);

@@ -3,8 +3,7 @@
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     scripts = require('./gulp/scripts'),
-    styles = require('./gulp/styles'),
-    // exec = require('child_process').exec;
+    styles = require('./gulp/styles');
     var sass = require('gulp-sass');
 
 require('require-dir')('./gulp');
